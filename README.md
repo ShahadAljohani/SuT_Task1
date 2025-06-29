@@ -22,6 +22,7 @@ Hobby Gearmotor
 2 resistors 
 
 jumper-wires
+
 --------------------
 
 ## Hardware Configuration 
