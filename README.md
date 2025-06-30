@@ -7,21 +7,33 @@ A control task implementing a Gearmotor and 2 LEDs operated via push-button inpu
 
 * components used:
   
-Arduino
+      Arduino
 
-BreadBoard
+      BreadBoard
 
-Hobby Gearmotor 
+      Hobby Gearmotor 
 
-3v battery
+      NMOS transistor
 
-2 LEDs
+      3v battery
 
-3 push-buttons
+      2 LEDs
 
-2 resistors 
+      3 push-buttons
 
-jumper-wires
+      2 resistors 
+
+      jumper-wires
+
+----------------------------
+### Breif Explanation of NMOS
+N-channel MOSFET 	
+
+NMOS - a transistor that has 3 pins. Gate, Drain, Source.
+
+The gate is going to be connected to the Arduino to accept the low current from Arduino, because it only needs a voltage signal, not continuous current, and the current draw is minimal (just a short pulse while switching)
+
+Power from the battery will flow out of the positive terminal of the battery, into the power bus (+ column in the BB) through the motor, then to the motor's negative terminal through the transistor, and then through the jumper wire to ground. Then, through the common ground to the battery (it is necessary) without short circuiting the positive voltages to each other (means not directly connecting 2 or more separate voltage sources, because they might have different voltage levels, which can cause damage)
 
 --------------------
 
